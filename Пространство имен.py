@@ -9,12 +9,15 @@ def string_info(string):
     return tuple([len(str(string)), str(string).upper(), str(string).lower()])
 
 def is_contains(string, list_to_search):
+    flag = False
     count_calls()
     for element in list_to_search:
         if str(element).upper() == str(string).upper():
-            return True
-        else:
-            return False
+            flag = True
+            return flag
+    if flag != True:
+        flag = False
+        return flag
 
 print(string_info('Capybara'))
 print(string_info('Armageddon'))
